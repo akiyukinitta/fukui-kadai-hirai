@@ -1,19 +1,321 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>福井支店練習用課題</title>
-    <style>
-        h1{
-            color: red;
-        }
-    </style>
-</head>
-<body>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <h1>福井支店練習用課題です</h1>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <title>福井支店練習用課題</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/sample.css">
+</head>
+
+<body id="top_page" class="body_container">
+
+    <div>
+        <!-- メニューボタン -->
+        <div id="open_btn" class="open_btn" onclick="showMenu()">
+            <img src="image/right_top_menu.png" />
+        </div>
+
+        <!-- ×ボタン -->
+        <div id="close_btn" class="close_btn" onclick="closeMenu()">
+            <img src="image/close_menu.png" />
+        </div>
+
+        <!-- トップスクロールボタン -->
+        <div id="top_scroll_btn" class="top_scroll_btn" onclick="moveTopPage()">
+            <img class="top_scroll_icon" src="image/top_scroll.png" />
+        </div>
+
+        <!-- ヘッダー -->
+        <header class="header_container">
+            <div class="header_image">
+                <div class="header_text">
+                    <p class="header_text_top">白金台にある癒しのエステサロン</p>
+                    <h1 class="header_text_bottom">Beautiful Days</h1>
+                </div>
+            </div>
+        </header>
+
+        <main style="padding: 30px;z-index: 3;">
+            <!-- エステサロン 紹介 -->
+            <div class="introduction_container">
+                <!-- エステサロン画像 -->
+                <div class="introduction_container_image">
+                    <img class="introduction_image" src="image/shop_introduction.png" />
+                </div>
+                <!-- エステサロン紹介文 -->
+                <div class="introduction_text">
+                    <h3>白金台にある癒しのプライベート空間</h3>
+                    <p>エステサロンビューティフルデイズは、<br>
+                        がんばるあなたがちょっと疲れた時に<br>
+                        立ち寄れるほっとする時間をつくります。
+                    </p>
+                    <div>
+                        <a class="introduction_button" href="#">お店のご紹介</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Men -->
+            <div class="men_container">
+                <!-- タイトル -->
+                <div class="title_text">
+                    <span>Men</span>
+                </div>
+
+                <!-- スライダー -->
+                <div>
+                    <ul class="slider">
+                        <!-- 1枚目 -->
+                        <li>
+                            <a href="#" class="card_link">
+                                <img class="slider_img" src="image/slider_01.png">
+                                <div class="card_text">
+                                    <h3>ハンドケア / フットケア</h3>
+                                    <p>3,000 yen～</p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 2枚目 -->
+                        <li>
+                            <a href="#" class="card_link">
+                                <img class="slider_img" src="image/slider_02.png">
+                                <div class="card_text">
+                                    <h3>ウェディングメニュー</h3>
+                                    <p>12,000 yen～</p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 3枚目 -->
+                        <li>
+                            <a href="#" class="card_link">
+                                <img class="slider_img" src="image/slider_03.png">
+                                <div class="card_text">
+                                    <h3>ボディトリートメント</h3>
+                                    <p>8,000 yen～</p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 4枚目 -->
+                        <li>
+                            <a href="#" class="card_link">
+                                <img class="slider_img" src="image/slider_04.png">
+                                <div class="card_text">
+                                    <h3>フェイシャル</h3>
+                                    <p>5,000 yen～</p>
+                                </div>
+                            </a>
+                        </li>
+                        <!-- 5枚目 -->
+                        <li>
+                            <a href="#" class="card_link">
+                                <img class="slider_img" src="image/slider_05.png">
+                                <div class="card_text">
+                                    <h3>メイク / セット</h3>
+                                    <p>3,000 yen～</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- メニュー一覧ボタン -->
+                <div class="menu_button">
+                    <a href="#" class="menu_button_link">
+                        <span>メニュー一覧を見る</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ご予約方法 -->
+            <div class="reserve_container">
+                <div class="reserve_image"></div>
+                <div class="reserve_text">
+                    <h2>ご予約方法</h2>
+                    <dl>
+                        <a href="#" class="reserve_link">TEL 03-1234-5678</a>
+                        <dd>（営業時間：10:00-20:00）</dd>
+                    </dl>
+                    <div class="contact-btn">
+                        <a href="#" class="reserve_button">
+                            <span>お問い合わせ</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog -->
+            <div>
+                <!-- タイトル -->
+                <div class="title_text">
+                    <span>Blog</span>
+                </div>
+
+                <!-- 一覧 -->
+                <div class="blog_container">
+                    <!-- 1枚目 -->
+                    <div class="blog_card">
+                        <a href="#">
+                            <figure class="blog_figure">
+                                <img class="blog_image" src="image/blog_01.jpg">
+                                <time datetime="2021-1-4" class="blog_time">
+                                    2021.1.4
+                                </time>
+                            </figure>
+                        </a>
+                        <div>
+                            <span>お得なコスメキャンペーン</span>
+                        </div>
+                    </div>
+                    <!-- 2枚目 -->
+                    <div class="blog_card">
+                        <a href="#">
+                            <figure class="blog_figure">
+                                <img class="blog_image" src="image/blog_02.jpg">
+                                <time datetime="2021-1-4" class="blog_time">
+                                    2021.1.4
+                                </time>
+                            </figure>
+                        </a>
+                        <div>
+                            <span>新春のご挨拶</span>
+                        </div>
+                    </div>
+                    <!-- 3枚目 -->
+                    <div class="blog_card">
+                        <a href="#">
+                            <figure class="blog_figure">
+                                <img class="blog_image" src="image/blog_03.jpg">
+                                <time datetime="2021-1-2" class="blog_time">
+                                    2021.1.2
+                                </time>
+                            </figure>
+                        </a>
+                        <div>
+                            <span>ブログはじめました</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 地図 -->
+            <div>
+                <!-- タイトル -->
+                <div class="title_text">
+                    <span>MAP</span>
+                </div>
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12970.343494214327!2d139.7261466!3d35.6379345!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4e83b433e2d57079!2z55m96YeR5Y-w6aeF!5e0!3m2!1sja!2sjp!4v1645248974619!5m2!1sja!2sjp"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- フッター -->
+        <footer class="footer_container">
+            <dl class="footer_container_dl">
+                <dt class="footer_container_dt">
+                    <span class="footer_text">
+                        <span>
+                            白金台の癒しのエステサロン
+                        </span>
+                    </span>
+                </dt>
+                <dd class="footer_container_dd">
+                    <span class="footer_text">
+                        <span>
+                            Beautiful
+                        </span>
+                    </span>
+                </dd>
+            </dl>
+            <div class="footer_list">
+                <div class="footer_text">
+                    <div>
+                        <ul class="footer_ul">
+                            <li class="footer_li"><a href="#" class="footer_link">Top</a></li>
+                            <li class="footer_li"><a href="#" class="footer_link">About</a></li>
+                            <li class="footer_li"><a href="#" class="footer_link">Menu</a></li>
+                            <br class="footer_br">
+                            <li class="footer_li"><a href="#" class="footer_link">Contact</a></li>
+                            <li class="footer_li"><a href="#" class="footer_link">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <small class="footer_small">
+                <span class="footer_text">
+                    <span>
+                        &copy; Beautiful Days
+                    </span>
+                </span>
+            </small>
+        </footer>
+
+        <nav id="menu" class="menu">
+            <div class="menu_list">
+                <ul class="menu_ul">
+                    <li class="menu_li"><a class="menu_link menu_list_top" href="#"><span>Beautiful Days</span></a></li>
+                    <li class="menu_li"><a class="menu_link" href="#">Top</a></li>
+                    <li class="menu_li"><a class="menu_link" href="#">About</a></li>
+                    <li class="menu_li"><a class="menu_link" href="#">Menu</a></li>
+                    <li class="menu_li"><a class="menu_link" href="#">Contact</a></li>
+                    <li class="menu_li"><a class="menu_link" href="#">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+
+    <script>
+        function moveTopPage() {
+            console.log("moveTopPage");
+            // トップページにスクロール
+            document.getElementById("top_page").scrollIntoView(true);
+        }
+
+        function showMenu() {
+            console.log("showMenu");
+            // メニュー表示
+            document.getElementById("menu").classList.add("active");
+            // メニューボタン非表示
+            document.getElementById("open_btn").style.display = "none";
+            // ×ボタン表示
+            document.getElementById("close_btn").style.display = "block";
+            //トップページスクロールボタン非表示
+            document.getElementById("top_scroll_btn").style.display = "none";
+        }
+
+        function closeMenu() {
+            console.log("closeMenu");
+            // メニュー非表示
+            document.getElementById("menu").classList.remove("active");
+            // ×ボタン非表示
+            document.getElementById("close_btn").style.display = "none";
+            // メニューボタン表示
+            document.getElementById("open_btn").style.display = "block";
+            //トップページスクロールボタン表示
+            document.getElementById("top_scroll_btn").style.display = "block";
+        }
+    </script>
 </body>
+
 </html>
