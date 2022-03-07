@@ -2,6 +2,9 @@
         .body_container {
             width: 100%;
             margin: 0;
+            background-color: #F8F9FA;
+            color:#555555;
+            font-family: 'Noto Serif JP', serif;
         }
 
         /* ------共通------ */
@@ -10,6 +13,7 @@
             font-size: 60px;
             text-align: center;
             color: #B6E2A2;
+            font-family: 'Parisienne', cursive;
         }
 
         .open_btn {
@@ -83,6 +87,7 @@
                 line-height: 1;
                 letter-spacing: 0;
                 padding: 0 10px;
+                font-family: 'Parisienne', cursive;
             }
         }
 
@@ -117,6 +122,7 @@
                 line-height: 1;
                 letter-spacing: 0;
                 padding: 0 10px;
+                font-family: 'Parisienne', cursive;
             }
         }
 
@@ -199,13 +205,14 @@
             text-align: center;
             cursor: pointer;
             padding: 12px 12px;
-            color: #5d5d5d;
-            line-height: 1em;
+            color: #333333;
+            line-height: 2em;
             transition: .3s;
             border: 1px solid #dddddd;
             text-decoration: none;
             margin-top: 25px;
-            width: 115px;
+            width: 165px;
+            height: 52px;
         }
 
         /* ------Men------ */
@@ -543,4 +550,8 @@
             display: block;
             letter-spacing: 0.1em;
             font-weight: bold;
+        }
+
+        .english_font {
+            font-family: 'Parisienne', cursive;
         }
