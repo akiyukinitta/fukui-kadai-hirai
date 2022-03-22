@@ -2,6 +2,7 @@
 
 .slider .slick-slide {
     margin: 0 10px;
+    /* width: 319px !important; */
 }
 
 /*ドットナビゲーションの設定*/
@@ -43,3 +44,19 @@
     opacity: .75;
     color: black;
 }
+
+.slick-slide_img{
+    width: 100%;
+    height: auto;
+}
+
+.slick-slide-section {
+    background: #fff;
+    margin: 0 0 10px 0;
+}
+
+/* PC版 */
+@media screen and (min-width:768px) {}
+
+/* SP版 */
+@media screen and (max-width:768px) {}
